@@ -1,0 +1,165 @@
+#mon_form {
+    font-family: 'Glyphicons Halflings';
+    width: 50%;
+    margin: 0 auto;
+}
+
+#mon_form h1,
+#mon_form h2 {
+    text-align: center;
+
+}
+
+#mon_form input[type="text"],
+#mon_form input[type="email"],
+#mon_form input[type="number"],
+#mon_form input[type="date"],
+#mon_form input[type="depart"],
+#mon_form input[type="arrive"],
+#mon_form input[type="cubage"],
+#mon_form input[type="infos"],
+.input_text,
+.input_text1 {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+
+}
+
+
+
+.input_text,
+.input_text1 {
+    width: 100%;
+    padding: 2px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+
+}
+
+#mon_form input[type="text"],
+#mon_form input[type="email"],
+#mon_form input[type="number"],
+#mon_form input[type="depart"],
+#mon_form input[type="arrive"],
+#mon_form input[type="date"],
+.input_text {
+    width: 44%;
+    justify-content: center;
+}
+
+
+#mon_form input[type="button"],
+#mon_form input[type="reset"] {
+    width: 100%;
+    background-color: #8BC43D;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#mon_form input[type="button"]:hover {
+    background-color: #5DA616;
+}
+
+#mon_form input[type="reset"] {
+    background-color: #f44336;
+}
+
+#mon_form input[type="reset"]:hover {
+    background-color: #e57373;
+}
+
+#mon_form input[name="cubage"],
+#mon_form input[name="infos"] {
+    width: 100%;
+    /* pour que la largeur de l'input soit la même que le formulaire */
+    height: 240px;
+    /* pour que l'input soit sur plusieurs lignes */
+}
+
+ul {
+    padding: 0;
+}
+
+li {
+    background-color: rgba(235, 225, 225, 0.233);
+    padding: 10px;
+    list-style-type: none;
+    /* permet de mettre les éléments côte à côte */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    /* centre les éléments horizontalement */
+    align-items: center;
+    /* centre les éléments verticalement */
+}
+
+li input[name="nom"],
+li input[name="prenom"] {
+    width: 44%;
+    /* définit la largeur de chaque input à 48% */
+    margin: 0 2%;
+    /* ajoute une marge de 1% à gauche et à droite de chaque input */
+}
+
+#civil {
+    display: block;
+    text-align: center;
+}
+
+
+#li {
+    display: block;
+    background-color: rgba(235, 225, 225, 0.233);
+    padding: 10px;
+    text-align: center;
+    list-style-type: none;
+    /* permet de mettre les éléments côte à côte */
+    justify-content: center;
+    /* centre les éléments horizontalement */
+    align-items: center;
+    /* centre les éléments verticalement */
+}
+
+fieldset {
+    border: none;
+}
+
+input::placeholder {
+    text-overflow: ellipsis;
+    white-space: pre-wrap;
+    color: lightgray;
+    width: auto;
+}
+
+h3 {
+    width: 100%;
+}
+
+input #mon_form input[type="cubage"],
+#mon_form input[type="infos"] {
+    white-space: pre-wrap !important;
+    min-height: 1.5em;
+    overflow-wrap: break-word;
+    width: auto;
+    overflow: visible;
+}
+
+textarea {
+    width: 100% !important;
+    min-height: 200px;
+    height: auto;
+}
+
+textarea::placeholder {
+    color: lightgrey;
+}

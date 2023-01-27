@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Formulaire mailto</title>
+  <link rel='stylesheet' href='https://static.aliasdmc.fr/css/mini_codepen.css'>
+  <link rel="stylesheet" href="./style.css">
+
+
+</head>
+
+
+<body>
+
+  <!-- partial:index.partial.html -->
+  <!-- 
+Question :
+https://openclassrooms.com/forum/sujet/formulaire-html-genere-un-email-vide-avec-ms-edge
+-->
+  <form method="POST" id="mon_form" enctype="text/plain" action="mailto:dempar75000@hotmail.fr" target="_blank">
+    <input type="hidden" name="bcc" value="yanes75@hotmail.fr">
+    <input type="hidden" name="subject" value="Demande devis déménagement">
+
+    <h1>DEVIS GRATUIT</h1>
+
+
+    <h2>Vos informations :</h2>
+    <fieldset>
+      <ul>
+
+        <li id="civil">
+          <h3>Civilité :</h3>
+          <input id="input" type="radio" name="civilite" value="M.">Mr ou
+          <input type="radio" name="civilite" value="Mme">Mme
+        </li>
+
+        <li>
+
+          <input placeholder="Nom..." type="text" name="nom"> <input placeholder="Prénom..." type="text" name="prenom">
+        </li>
+        <li>
+          <input placeholder="Téléphone..." type="number" name="tel"> <input placeholder="Email..." type="text"
+            name="email">
+        </li>
+
+        <br />
+        <br />
+        <li>
+          <div class="row">
+            <div class="col-md-4 col-lg-2">
+            </div>
+            <div class="col-md-8 col-lg-10 col-lg-offset-0">
+              <select class="input_text1 selectmenu je_demenage_quoi" name="type_logement_a_demenager">
+                <option value="">Logement ou biens à déménager</option>
+                <option value="type_logement_studio">Un studio &lt; 20 m&sup2;</option>
+                <option value="type_logement_t1">Un T1 - 20 à 40 m&sup2;</option>
+                <option value="type_logement_t2">Un T2 - 40 à 60 m&sup2;</option>
+                <option value="type_logement_t3">Un T3 - 60 à 80 m&sup2;</option>
+                <option value="type_logement_t4">Un T4 - 80 à 100 m&sup2;</option>
+                <option value="type_logement_t5">Un T5 - 100 à 200 m&sup2;</option>
+                <option value="type_logement_t6">Un T6 - 200 m&sup2; et plus</option>
+                <option value="type_box">Un box de stockage</option>
+                <option value="type_logement_qq_meubles">Quelques meubles</option>
+                <option value="type_piano">Un piano droit</option>
+              </select>
+            </div>
+          </div>
+        </li>
+        <li>
+          <input placeholder="Ville de départ et code postal..." class="icon-depart" type="depart" name="depart" />
+          <div class="col-md-8 col-md-offset-4 col-lg-5 col-lg-offset-0">
+            <div class="row visible-xs visible-sm visible-md">&nbsp;</div>
+            <select class="input_text1 selectmenu type-logement" name="type_logement_depart">
+              <option value="">Type de logement</option>
+              <option value="appartement">Appartement</option>
+              <option value="maison_plain_pied">Maison de plain pied</option>
+              <option value="maison_etage">Maison avec étage(s)</option>
+              <option value="garage">Garage ou box de stockage</option>
+              <option value="garde_meubles">Garde-meubles</option>
+            </select>
+          </div>
+
+
+        </li>
+
+        <li>
+          <input placeholder="Ville d' arrivée et code postal..." class="icon-depart" type="arrive" name="arrive" />
+          <div class="col-md-8 col-md-offset-4 col-lg-5 col-lg-offset-0">
+            <div class="row visible-xs visible-sm visible-md">&nbsp;</div>
+            <select class="input_text1 selectmenu type-logement" name="type_logement_arrivee">
+              <option value="">Type de logement</option>
+              <option value="appartement">Appartement</option>
+              <option value="maison_plain_pied">Maison de plain pied</option>
+              <option value="maison_etage">Maison avec étage(s)</option>
+              <option value="garage">Garage ou box de stockage</option>
+              <option value="garde_meubles">Garde-meubles</option>
+            </select>
+          </div>
+        </li>
+        </li>
+        Date de départ :
+        <input type="date" name="date_arrivee" />
+        <br />
+        Date d'arrivée' :
+        <input type="date" name="date_fin" />
+        <br />
+        <br /><br>
+        <li id="li">
+          <h3>Cubage et listing :</h3>
+          <textarea name="cubage" class="input_text"
+            placeholder="Coller ici le résultat du calculateur de cubage, ou indiquez nous votre cubage..."></textarea>
+        </li>
+        <br /><br>
+        <li id="li">
+          <h3>informations complémentaires :</h3>
+          <textarea name="infos" class="input_text"
+            placeholder="Conditions d' accès, objets lourds et/ou spécifiques. Exemple : piano/ moto, ..."></textarea>
+        </li>
+        <br /><br>
+      </ul>
+
+
+
+    </fieldset>
+    <br />
+
+    <input type="button" value="Envoyer votre demande" onclick="sendMail(event)" />
+    <input type="reset" value="Effacer" />
+  </form>
+
+  <!-- partial -->
+  <script src='https://static.aliasdmc.fr/js/mini_codepen.js'></script>
+  <script src="./script.js"></script>
+
+</body>
+
+</html>
